@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{{ title }}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 
-    {% block head_content %}{% endblock %}
-</head>
-<body>
-    <header class="header">
-        <h1 class="header-logo">
-            <a href={{ url_for('index') }} class="header-link"></a>
-        </h1>
-    </header>
-</body>
+        {% block head_content %} {% endblock %}
+    </head>
+    
+    <body>
+        <header class="header">
+            <h1 class="header__logo">
+                <a href="{{ url_for('index') }}" class="header__link">Tasks</a>
+            </h1>
+            {% if "add" not in request.endpoint %}
+                <a href="{{url_for('add_task')}}" class="header__link">+ Add new</a>
+            {% endif %}
+        </header>
+
+        <main class="main">
+            {% block main_content %}
+            {% endblock %}
+        </main>
+    </body>
 </html>

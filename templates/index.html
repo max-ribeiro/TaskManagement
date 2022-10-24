@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block main_content %}
+    <section>
+        {% for task in tasks %}
+            <div class="task">
+                <p class="task__name">
+                    {{task}}
+                </p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}
