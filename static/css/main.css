@@ -63,3 +63,6 @@ body {
     filter:saturate(1.5);
     transform: scale(1.05);
 }
+.date_link--current {
+    background-color: #c99505;
+}

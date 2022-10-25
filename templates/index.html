@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% block main_content %}
+    {% include 'datetimecomponent.html'%}
     <section>
         {% for task in tasks %}
             <div class="task">
@@ -9,5 +10,5 @@
                 </p>
             </div>
         {% endfor %}
-    </section>
+</section>
 {% endblock %}
