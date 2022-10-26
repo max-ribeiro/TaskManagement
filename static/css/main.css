@@ -47,6 +47,7 @@ body {
 }
 
 .form_input {
+    margin-top: 8px;
     padding: 1rem;
     font-family: inherit;
     font-size: inherit;
@@ -56,7 +57,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.form_button {
+.add-task .form_button{
     font-size: inherit;
     background-color: #26C281;
     cursor: pointer;
@@ -67,7 +68,7 @@ body {
     transition: 0.3s ease-in-out;
 }
 
-.form_button:hover {
+.add-task .form_button:hover {
     filter: saturate(1.5);
     transform: scale(1.05);
 }
@@ -134,4 +135,44 @@ body {
     .dates_link:last-of-type {
         display: block;
     }
+}
+.task {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26px;
+    padding: 20px;
+    background-color: #fffbf4;
+    border: 3px solid #ddd;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+.task:not(.completed) {
+    padding: 0;
+    transition: 3s ease-in-out;
+}
+.task:not(.completed):hover {
+    filter: saturate(1.5);
+}
+.task_icon {
+    width: 1em;
+    height: 1em;
+}
+.task_name {
+    margin: 0;
+}
+.task_form {
+    width: 100%;
+}
+.task_button {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: left;
+    background-color: unset;
+    cursor: pointer;
+    border: none;
 }
