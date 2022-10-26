@@ -150,7 +150,6 @@ body {
 }
 .task:not(.completed) {
     padding: 0;
-    transition: 3s ease-in-out;
 }
 .task:not(.completed):hover {
     filter: saturate(1.5);

@@ -1,6 +1,6 @@
 <section id="datetime-component">
     {% for date in dateRange(selectedDate) %}
-        <a href="{{ url_for('index', date=date) }}" class="dates_link {{'date_link--current' if loop.index0 == 3 else ''}}">
+        <a href="{{ url_for('tasks.index', date=date) }}" class="dates_link {{'date_link--current' if loop.index0 == 3 else ''}}">
             <time class="date" datetime="{{ date }}">
                 <span>{{ date.strftime("%a") }}</span>
                 <span>{{ date.strftime("%d") }}</span>

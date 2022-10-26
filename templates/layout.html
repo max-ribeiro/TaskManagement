@@ -15,10 +15,10 @@
     <body>
         <header class="header">
             <h1 class="header_logo">
-                <a href="{{ url_for('index') }}" class="header_link">Tasks</a>
+                <a href="{{ url_for('tasks.index') }}" class="header_link">Tasks</a>
             </h1>
             {% if "add" not in request.endpoint %}
-                <a href="{{url_for('add_task')}}" class="header_link">+ Add new</a>
+                <a href="{{url_for('tasks.add_task')}}" class="header_link">+ Add new</a>
             {% endif %}
         </header>
 
