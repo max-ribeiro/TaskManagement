@@ -8,9 +8,11 @@ body {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
 }
-.header, .main{
+
+.header,
+.main {
     max-width: 40rem;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 1rem;
 }
 
@@ -20,26 +22,31 @@ body {
     color: #fff;
     justify-content: space-between;
     align-items: center;
-    border-radius:  6px 6px 0px 0px;
+    border-radius: 6px 6px 0px 0px;
 }
-.header_link{
+
+.header_link {
     text-decoration: none;
     color: inherit;
     transition: color 0.5s ease-in-out;
 }
-.header_link:hover{
+
+.header_link:hover {
     color: #a0cef9;
 }
+
 .header_logo {
     margin: 0;
     font-size: 1.5rem;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     font-size: 1.1rem;
 }
-.form_input{
+
+.form_input {
     padding: 1rem;
     font-family: inherit;
     font-size: inherit;
@@ -52,17 +59,79 @@ body {
 .form_button {
     font-size: inherit;
     background-color: #26C281;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 6px;
-    border:none;
+    border: none;
     padding: 0.5rem 2.5rem;
     align-self: stretch;
     transition: 0.3s ease-in-out;
 }
+
 .form_button:hover {
-    filter:saturate(1.5);
+    filter: saturate(1.5);
     transform: scale(1.05);
 }
+
 .date_link--current {
-    background-color: #c99505;
+    background-color: #f9dba0;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-around;
+    color: #000;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.dates_link {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#datetime-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.dates_link:hover {
+    transform: scale(1.05);
+}
+
+.dates_link:first-of-type,
+.dates_link:nth-of-type(2),
+.dates_link:last-of-type,
+.dates_link:nth-last-of-type(2) {
+    display: none;
+}
+
+/* Comes into effect when the screen is 400px wide. Reveals the second and second-to-last date link*/
+@media screen and (min-width: 25rem) {
+
+    .dates_link:nth-of-type(2),
+    .dates_link:nth-last-of-type(2) {
+        display: block;
+    }
+}
+
+/* Comes into effect when the screen is 560px wide. Reveals the first and last date link */
+@media screen and (min-width: 35rem) {
+
+    .dates_link:first-of-type,
+    .dates_link:last-of-type {
+        display: block;
+    }
 }
