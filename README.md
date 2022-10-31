@@ -1,5 +1,5 @@
 # TaskManagement
-App to add dailly tasks(study proposes)
+App to add dailly tasks(study purposes)
 # Techs:
 Python | Flask | MongoDB
 
